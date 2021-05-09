@@ -944,6 +944,7 @@
         <!-- 上框框 -->
         <div class="title">登录</div>
         <a href="javascript:;" class="close"></a>
+
         <!-- 二维码登录 -->
         <div class="login-qrcode full">
             <div class="phonePic"></div>
@@ -959,7 +960,8 @@
                 <a href="#" class="o-btn">选择其他登录模式</a>
             </div>
         </div>
-        <!-- 其他方式登录 -->
+
+        <!-- 其他方式登录的总窗口 -->
         <div class="login-list">
             <!-- 手机号码登录 -->
             <div class="u-main">
@@ -1001,9 +1003,43 @@
                 <a href="javascript:;">《儿童隐私政策》</a>
             </div>
         </div>
+
+        <!-- 手机号码登录的子窗口 -->
+        <div class="phone_login" style="display: block;">
+            <div class="phoneInput">
+                <div class="p-num">
+                    <a href="javascript:;">
+                        <span class="p-code">+86</span>
+                        <span class="p-icon"></span>
+                    </a>
+                    <input type="number" onkeyup="this.value=this.value.replace(/\D/g,'')" class="phoneNum"
+                        placeholder="请输入手机号">
+                </div>
+                <div class="p-code">
+                    <input type="password" class="p-password" placeholder="请输入密码">
+                </div>
+                <div class="f-mgt10">
+                    <input type="checkbox" checked id="p-auto">
+                    <label for="p-auto">自动保存</label>
+                    <a href="javascript" class="p-forget">忘记密码?</a>
+                </div>
+                <div class="p-l-btn">
+                    <a href="javascript:;" class="p-login full">
+                        <i>登 录</i>
+                    </a>
+                </div>
+            </div>
+            <div class="btmbar"></div>
+        </div>
+
         <!-- 勾选提醒 -->
         <div class="remind">请先勾选同意《服务条款》、《隐私政策》、《儿童隐私政策》</div>
+
     </div>
+
+    <!-- 背后蒙版 -->
+    <div class="backBlock"></div>
+
 
 
 

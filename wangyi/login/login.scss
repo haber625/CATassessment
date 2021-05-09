@@ -95,9 +95,9 @@
             }
         }
     }
-    // 其他方式登录
+    // 其他方式登录的总窗口
     .login-list {
-        // display: none;
+        display: none;
         height: 334px;
         background-color: #fff;
         //手机号码
@@ -154,6 +154,7 @@
                 }
             }  
         }
+        //隔壁其他方式
         .u-alt {
             float: left;
             margin-top: 40px;
@@ -213,6 +214,120 @@
             }
         }
     }
+    //手机登录窗口
+    .phone_login {
+        height: 273px;
+        background-color: #fff;
+        .phoneInput {
+            padding: 30px 0 43px;
+            width: 220px;
+            margin: 0 auto;
+            .p-num {
+                border: 1px solid #cdcdcd;
+                border-radius: 2px;
+                display: inline-block;
+                a {
+                    position: relative;
+                    float: left;
+                    display: block;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0 18px 0 5px;
+                    border-right: 1px solid #cdcdcd;
+                    .p-code {
+                        line-height: 30px;
+                        color: #333;
+                    }
+                    .p-icon {
+                        position: absolute;
+                        top: 14px;
+                        right: 7px;
+                        width: 7px;
+                        height: 4px;
+                        background-position: -260px -450px;
+                        background-image: url(../img/icon2.png);
+                    }
+                }
+                .phoneNum {
+                    display: block;
+                    width: 171px;
+                    padding: 5px 8px 5px;
+                    height: 30px;
+                    line-height: 20px;
+                    border: none;
+                }
+            }
+            .p-code {
+                margin-top: 10px;
+                .p-password {
+                    height: 19px;
+                    width: 206px;
+                    margin: 0;
+                    padding: 5px 6px 6px;
+                    border: 1px solid #cdcdcd;
+                    border-radius: 2px;
+                    line-height: 19px;
+                    box-sizing: content-box;
+                }
+            }
+            .f-mgt10{
+                margin-top: 10px;
+                line-height: 10px;
+                width: 100%;
+                display: inline-block;
+                input {
+                    float: left;
+                    margin-right: 10px;
+                }
+                label {
+                    float: left;
+                    color: #979797;
+                }
+                a {
+                    float: right;
+                    color: #979797;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .p-l-btn {
+                margin-top: 20px;
+                a {
+                    width: 215px;
+                    height: 31px;
+                    line-height: 31px;
+                    background-image: url(../img/button2.png);
+                    background-position: right -428px;
+                    text-align: center;
+                    i {
+                        display: block;
+                        width: 175px;
+                        box-sizing: content-box;
+                        font-style: normal;
+                        color: #fff;
+                        padding: 0 15px 0 20px;
+                        background-image: url(../img/button2.png);
+                        background-position: 0 -387px;
+                        &:hover {
+                            background-position: 0 -469px;
+                        }
+                    }
+                    &:hover {
+                        background-position: right -510px;
+                    }
+                }
+            }
+        }
+        .btmbar {
+            padding: 0 19px;
+            height: 48px;
+            border-top: 1px solid #c6c6c6;
+            border-radius: 0 0 4px 4px;
+            line-height: 48px;
+            background-color: #f7f7f7;
+        }
+    }
     //提醒窗口
     .remind {
         display: none;
@@ -228,4 +343,18 @@
         padding: 10px;
         text-align: center;
     }
+    //几个登录窗口的共同属性
+    .login-qrcode,.login-list,.phone_login {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
 }
+    //背后蒙版
+.backBlock {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    color: rgba(0, 0, 0, 0.5);
+}
+
