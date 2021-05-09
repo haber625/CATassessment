@@ -1,0 +1,231 @@
+// 登录窗口
+.Login{
+    // display: none;
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    margin-left: -361px;
+    z-index: 9998;
+    width: 530px;
+    height: 372px;
+    border-radius: 4px;
+    box-shadow: 0 5px 16px rgb(0 0 0 / 80%);
+    border: none;
+    // 小标题
+    .title {
+        padding-right: 45px;
+        margin: 0;
+        height: 38px;
+        line-height: 38px;
+        padding-left: 18px;
+        // border-radius: 3px 3px 0 0;
+        font-weight: bold;
+        font-size: 14px;
+        color: #fff;
+        background-position: 50% 0;
+        border-bottom: 1px solid #191919;
+        border-radius: 4px 4px 0 0;
+        background: #2d2d2d;
+    }
+    // 关闭按钮
+    .close {
+        position: absolute;
+        z-index: 20;
+        top: 16px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        background-image: url(../img/layer.png);
+        background-position: 0 -95px;
+    }
+    // 二维码登录
+    .login-qrcode {
+        display: none;
+        max-height: 334px;
+        background-color: #fff;
+        .phonePic {
+            float: left;
+            margin: 38px 0 0 101px;
+            width: 125px;
+            height: 220px;
+            background-image: url(../img/qr_guide.png);
+            background-size: contain;
+        }
+        .right {
+            float: left;
+            width: 220px;
+            height: 204px;
+            margin: 38px 0 0 25px;
+            text-align: center;
+            .r-title {
+                font-size: 18px;
+            }
+            .qr {
+                width: 130px;
+                height: 130px;
+                padding: 4px;
+                margin: 13px auto;
+                position: relative;
+            }
+            p {
+                a {
+                    color: #0c73c2;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .otherbtn {
+            height: 28px;
+            width: 100%;
+            float: left;
+            .o-btn {
+                display: block;
+                width: 118px;
+                height: 100%;
+                margin: 20px auto 0;
+                padding-right: 0;
+                font-size: 12px;
+                border: 1px solid #979797;
+                border-radius: 15px;
+                line-height: 28px;
+                text-align: center;
+                color: rgba(0,0,0,0.80);
+            }
+        }
+    }
+    // 其他方式登录
+    .login-list {
+        // display: none;
+        height: 334px;
+        background-color: #fff;
+        //手机号码
+        .u-main {
+            float: left;
+            width: 224px;
+            height: 202px;
+            margin-top: 40px;
+            padding: 0 35px 3px 40px;
+            border-right: 1px dotted #ccc;
+            box-sizing: content-box;
+            //图片
+            .u-plt {
+                height: 120px;
+                background-image: url(../img/platform.png);
+                background-repeat: no-repeat;
+                background-position: 13px 0;
+            }
+            //注册、登录两个按钮共同属性
+            .f-mgt10 {
+                margin-top: 10px;
+                width: 219px;
+                height: 31px;
+                padding: 0 5px 0 0;
+                a {
+                    background-image: url(../img/button2.png);
+                    i {
+                        font-style: normal;
+                        width: 174px;
+                        background-image: url(../img/button2.png);
+                        padding: 0 15px 0 20px;
+                        height: 31px;
+                        line-height: 31px;
+                        text-align: center;
+                        display: inline-block;
+                        box-sizing: content-box;
+                    }
+                }
+            }
+            //手机号登陆按钮
+            .u-btn-1 {
+                background-position: right -428px;
+                i {
+                    background-position: 0 -387px;
+                    color: #fff;
+                }
+            }
+            //注册按钮
+            .u-btn-2 {
+                background-position: right -100px; 
+                i {
+                    background-position: 0 -59px;
+                    color: #333;
+                }
+            }  
+        }
+        .u-alt {
+            float: left;
+            margin-top: 40px;
+            padding: 3px 0 3px 39px;
+            
+            ul li {
+                margin-top: 15px;
+                display: block;
+                width: 148px;
+                line-height: 38px;
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+                a {
+                    color: #333;
+                    &:hover {
+                        text-decoration: underline;
+                    }    
+                }
+                i {
+                    float: left;
+                    width: 38px;
+                    height: 38px;
+                    margin-right: 15px;
+                    background-image: url(../img/logo.png);
+                }
+                .u-mlg2-wx {
+                    background-position: -150px -670px;
+                }
+                .u-mlg2-qq {
+                    background-position: -190px -670px;
+                }
+                .u-mlg2-wb {
+                    background-position: -231px -670px;
+                }
+                .u-mlg2-wy {
+                    background-position: -271px -670px;
+                }
+
+            }
+        }
+        .u-official-terms{
+            float: left;
+            margin-left: 40px;
+            margin-top: 30px;
+            font-size: 10px;
+            color: rgba(0,0,0,0.40);
+            line-height: 15px;
+            label {
+                color: #00000066;
+            }
+            a {
+                color: #507DAF;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    //提醒窗口
+    .remind {
+        display: none;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        margin-left: -100px;
+        margin-bottom: -15px;
+        width: 200px;
+        height: 50px;
+        background-color: rgba(43, 43, 43, 0.8);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 列表设置 */
+ul,ol {
+    display: inline-block;
+    list-style: none;
+}
+li {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+/* 常见背景图片设置 */
+.bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.full {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+/* 浮动 */
+.left {
+    float: left;
+}
+.right {
+    float: right
+}
