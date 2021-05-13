@@ -2,6 +2,7 @@
   height: 285px;
   background-image: url(img/1.jpg);
   background-size: cover;
+  -webkit-transition: all 1s linear;
 }
 
 .r_content {
@@ -61,15 +62,22 @@
   top: 50%;
   margin-top: -10px;
   width: 20px;
-  height: 20px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .r-cont span a {
-  color: #d3d3d3cc;
+  color: #fff;
+  font-size: 20px;
 }
 .r-cont .b_right {
   left: 100%;
   margin-left: -20px;
+  border-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .download {

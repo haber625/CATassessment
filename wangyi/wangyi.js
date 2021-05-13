@@ -1,6 +1,9 @@
+//防止刷新数据丢失
+
+
+
 //搜索栏点击后 value值为空
 var inputSearch = document.getElementById('inputSearch');
-console.log(inputSearch);
 inputSearch.onclick = function () {
     if (inputSearch.value == "音乐/视频/电台/用户")
         inputSearch.value = "";
@@ -16,10 +19,9 @@ let disappear = function (obj) {
     obj.style.display = "none";
 }
 
-//点击登录 显示登录窗口
-let login = document.getElementsByClassName('login')[0];
-let Login = document.getElementsByClassName('Login')[0];
-login.onclick = function () {
+//下方登录按钮
+let userInform_login = document.getElementsByClassName('userInform-login')[0];
+userInform_login.onclick = function () {
     Login.style.display = "block";
     document.body.style.overflow = "hidden";
 }
@@ -29,13 +31,33 @@ close.onclick = function () {
     Login.style.display = "none";
     document.body.style.overflow = "scroll";
 }
-// 二维码登录
-let login_qrcode = document.getElementsByClassName('login-qrcode')[0];
-// 其他登录方式
-let login_list = document.getElementsByClassName('login-list')[0];
-//二维码登录 切换至 其他登录
-let otherbtn = document.getElementsByClassName('otherbtn')[0];
-otherbtn.onclick = function () {
-    login_qrcode.style.display = "none";
-    login_list.style.display = "block";
+
+
+
+//底部播放条
+let player = document.getElementsByClassName('player')[0];
+player.onmouseover = function () {
+    player.style.bottom = "0";
 }
+player.onmouseout = function () {
+    player.style.bottom = "-40px";
+    // setTimeout(function () { player.style.bottom = "-40px" }, 1000);
+}
+//底部轮播条锁定
+let lock = document.getElementsByClassName('lock')[0];
+lock.onclick = function () {
+    if (lock.style.backgroundPosition == "-80px -376px") {
+        lock.style.backgroundPosition = "-100px -374px";
+        player.style.bottom = "0px";
+        player.onmouseout = function () { }
+    }
+    else {
+        lock.style.backgroundPosition = "-80px -376px"
+        player.onmouseout = function () {
+            player.style.bottom = "-40px";
+        }
+    }
+}
+
+
+//未登录时的权限
