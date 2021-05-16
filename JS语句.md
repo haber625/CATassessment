@@ -543,3 +543,74 @@ var data2 = new Data('2021-5-9 14:04:10');//这是字符型的
 var data3 = new Data(2021, 5, 01);//数字型，但是返回的会是2021年6月1号
 ```
 
+##### 格式化日期-年月日
+
+日期输出有固定的格式，若想单独提取日期的年月日等信息时：
+
+```js
+var data = new Data();
+var year = data.getFullYear();//获取当时的的年份
+var month = data.getMonth();//月份：注意月份是0~11
+var datas = data.getDatas();//当天日期
+var day = data.Day();//星期，范围是0~6，其中星期日是0
+//星期的常见表达，可以定义一个数组
+var arr = ['星期日','星期一','星期二'.....]
+//通过获取的day，将其作为索引号，即可与星期一一对应
+```
+
+##### 格式化日期-时分秒
+
+还可以封装一个获取时间的函数
+
+```js
+var getTime(){
+    var time = new Data();
+	var h = time.getHours();
+    if(h<10) h = '0' + h;
+	var m = time.getMintues();
+    if(m<10) m = '0' + m;
+	var s = time.getSeconds();
+    if(s<10) s = '0' + s;
+    return h +':' + m +':' + s
+}
+console.log(getTime());
+```
+
+##### Data的总的毫秒数（时间戳）
+
+1970年计起
+
+```js
+//传统的两个方法
+var data = new Data();
+concole.log(data.valueOf());
+console.log(data.getTime());
+//最常用的一个方法
+var time = +new Data();
+//H5新增的一个方法，所以较低版本浏览器不支持
+var time = Data.now();
+```
+
+##### 倒计时
+
+```js
+function countDown(time){
+    var nowTime = +new Data();
+    var inputTime = +new Data(time);//计算输入的时间的时间戳
+    var times = inputTime - nowTime;
+    //计算天时分秒
+    var d = parseInt(times/60/60/24);
+    	d = d > 10 ? d : '0' + d ; 
+    var h = parseInt(times/60/60%24);
+    	h = h > 10 ? h : '0' + h ; 
+    var m = parseInt(times/60%60);
+    	m = m > 10 ? m : '0' + m ; 
+    var s = parseInt(times%60);
+    	s = s > 10 ? s : '0' + s ; 
+    return d + '天' + h + '小时' + m '分' + s +'秒';
+}
+console.log(countDown('2021-5-9 18:37:09'))
+```
+
+
+
