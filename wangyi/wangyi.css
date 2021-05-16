@@ -116,18 +116,61 @@ body {
   border: solid 1px #ccc;
 }
 .top .nav_1 .nav_Content .login {
+  position: relative;
   float: right;
   height: 30px;
   width: 30px;
   line-height: 30px;
   margin: 20px 10px;
 }
+.top .nav_1 .nav_Content .login:hover .login_nav {
+  display: block;
+}
 .top .nav_1 .nav_Content .login a {
   color: #666;
+  border-radius: 20px;
 }
 .top .nav_1 .nav_Content .login a:hover {
   color: #787878;
   text-decoration: underline;
+}
+.top .nav_1 .nav_Content .login_nav {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: -40px;
+  width: 120px;
+  height: 180px;
+  background-color: #3c3d3f;
+  border-radius: 5px;
+  border: 1px solid #202020;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.top .nav_1 .nav_Content .login_nav .ln_content ul {
+  width: 100%;
+}
+.top .nav_1 .nav_Content .login_nav .ln_content ul li {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+.top .nav_1 .nav_Content .login_nav .ln_content ul li a {
+  color: #999;
+}
+.top .nav_1 .nav_Content .login_nav .ln_content ul li a:hover {
+  background-color: #272727;
+  color: #fff;
+}
+.top .nav_1 .nav_Content .login_nav .arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 8px solid #3c3d3f;
+  top: -18px;
+  left: 51px;
 }
 .top .nav_2 {
   height: 35px;
@@ -161,13 +204,75 @@ body {
   background-color: #0000003b;
 }
 
+.adver {
+  margin: 0 auto;
+  position: relative;
+}
+.adver .radio {
+  position: relative;
+  width: 960px;
+  height: 390px;
+  margin: 0 auto;
+  background-image: url(img/WeChat_20210515232738.mp4);
+  overflow: hidden;
+  margin-top: 10px;
+}
+.adver .radio video {
+  position: absolute;
+  top: -80px;
+}
+.adver .cover {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+.adver .cover .icon {
+  width: 40px;
+  height: 56px;
+  background-image: url(img/topbar.png);
+  background-position: 0 0;
+  margin: 0 auto;
+}
+.adver .cover .title {
+  color: #fff;
+  font-size: 35px;
+  line-height: 70px;
+  letter-spacing: 14px;
+  font-family: fangsong;
+}
+.adver .cover .try {
+  display: inline-block;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  background-color: #e60026;
+  font-size: 13px;
+  font-weight: 600;
+}
+.adver .cover .try:hover {
+  background-color: #ba051e;
+}
+.adver .cover .learnMore {
+  display: inline-block;
+  font-size: 13px;
+  width: 130px;
+}
+.adver .cover .learnMore:hover {
+  text-decoration: underline;
+}
+
 .discover-module {
   width: 980px;
-  height: 1750px;
+  height: 1720px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #d3d3d3;
   box-sizing: content-box;
+  margin-top: 10px;
 }
 .discover-module .discover-content .titlt {
   height: 33px;
@@ -224,6 +329,8 @@ body {
   position: relative;
   height: 140px;
   width: 140px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .discover-module .discover-content .h-songs li .cover a {
   position: absolute;
@@ -265,6 +372,7 @@ body {
 }
 .discover-module .discover-content .h-songs li .dec a {
   color: #333;
+  white-space: normal;
 }
 .discover-module .discover-content .h-songs li .dec a:hover {
   text-decoration: underline;
@@ -414,30 +522,62 @@ body {
 .discover-module .discover-content .dis-left {
   width: 74%;
   height: 100%;
-  padding: 20px 20px 40px 20px;
+  padding: 0px 20px 40px 20px;
 }
 .discover-module .discover-content .dis-left .hot {
-  height: 523px;
+  height: 493px;
+  margin-bottom: 50px;
+}
+.discover-module .discover-content .dis-left .report2018 {
+  width: 99%;
+  height: 310px;
+}
+.discover-module .discover-content .dis-left .report2018 .reportContent {
+  position: relative;
+  background-image: url(img/6cf2822ff217c80454b2b0f8de947e84.jpeg);
+  background-size: cover;
+  margin: 0px -20px;
+  width: 106%;
+}
+.discover-module .discover-content .dis-left .report2018 .reportContent .black {
+  opacity: 0;
+  position: absolute;
+  background-color: #2e2e2eba;
+  width: 99%;
+  height: 95%;
+  left: 8px;
+  top: 7px;
+  border-radius: 9px;
+  transition: all 1s;
+  font-size: 25px;
+  line-height: 305px;
+  text-align: center;
+  color: #c0b0b0;
+  letter-spacing: 10px;
+}
+.discover-module .discover-content .dis-left .report2018 .reportContent .black:hover {
+  opacity: 1;
 }
 .discover-module .discover-content .dis-left .personalRec {
-  height: 323px;
+  height: 290px;
+  margin-top: 30px;
 }
 .discover-module .discover-content .dis-left .new {
-  height: 280px;
+  height: 320px;
 }
 .discover-module .discover-content .dis-left .new .n-content {
-  height: 186px;
+  height: 206px;
   margin: 20px 0 37px;
-  border: 1px solid #d3d3d3;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .discover-module .discover-content .dis-left .new .n-content .inner {
   position: relative;
-  width: 684px;
-  height: 184px;
+  width: 683px;
+  height: 204px;
   top: 280px;
   left: 245px;
   font-size: 13px;
-  background-color: #fff;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -448,9 +588,9 @@ body {
   justify-content: space-around;
   list-style: none;
   display: block;
-  height: 184px;
+  height: 204px;
   width: 1368px;
-  background-color: #fff;
+  background-color: #f4f4f4;
   -webkit-animation-name: roll;
           animation-name: roll;
   -webkit-animation-duration: 15s;
@@ -466,7 +606,7 @@ body {
 }
 .discover-module .discover-content .dis-left .new .n-content .inner ul li {
   width: 171px;
-  height: 184px;
+  height: 204px;
   float: left;
   position: relative;
 }
@@ -474,19 +614,30 @@ body {
   transform: scale(1.5);
 }
 .discover-module .discover-content .dis-left .new .n-content .inner div {
+  margin: 25px 53px 7px 0;
   height: 117px;
   overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  border-radius: 30px;
 }
 .discover-module .discover-content .dis-left .new .n-content .inner img {
   position: absolute;
   width: 117px;
   transition: all 0.5s;
 }
-.discover-module .discover-content .dis-left .new .n-content .inner p {
+.discover-module .discover-content .dis-left .new .n-content .inner a {
+  color: #666;
   width: 117px;
   text-align: center;
   top: 100px;
   height: 20px;
+}
+.discover-module .discover-content .dis-left .new .n-content .inner a:hover {
+  text-decoration: underline;
+}
+.discover-module .discover-content .dis-left .new .n-content .inner p {
+  color: #999;
 }
 @-webkit-keyframes roll {
   100% {
@@ -516,11 +667,12 @@ body {
 .discover-module .discover-content .dis-right .userInform {
   height: 126px;
   background-image: url(img/index.png);
+  margin-top: 20px;
 }
 .discover-module .discover-content .dis-right .userInform .un-userInform p {
   width: 205px;
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 46px 0;
   line-height: 22px;
 }
 .discover-module .discover-content .dis-right .userInform .un-userInform .userInform-login {
@@ -590,6 +742,31 @@ body {
   margin: 22px 0 0 20px;
   height: 40px;
 }
+.discover-module .discover-content .xdms {
+  width: 100%;
+  height: 302px;
+  box-shadow: 0px 0px 35px;
+}
+.discover-module .discover-content .xdms .xdmsContent {
+  position: relative;
+  background-image: url(img/xdms.jpg);
+  background-size: cover;
+  width: 100%;
+}
+.discover-module .discover-content .xdms .xdmsContent .black {
+  opacity: 0;
+  position: absolute;
+  background-color: #aeaeae8c;
+  transition: all 1s;
+  font-size: 20px;
+  line-height: 85px;
+  text-align: center;
+  color: #ffffff;
+}
+.discover-module .discover-content .xdms .xdmsContent .black:hover {
+  opacity: 1;
+  letter-spacing: 10px;
+}
 .discover-module .discover-content .r-singer {
   height: 455px;
   margin-top: 15px;
@@ -613,10 +790,15 @@ body {
   width: 210px;
   height: 62px;
   background: #fafafa;
+  border: 1px solid #e9e9e9;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 .discover-module .discover-content .r-singer .s-content .enter li .pic {
   height: 60px;
   width: 60px;
+  border-radius: 100px;
+  overflow: hidden;
 }
 .discover-module .discover-content .r-singer .s-content .enter li .s-name {
   font-weight: 600;
@@ -625,21 +807,32 @@ body {
 .discover-module .discover-content .r-singer .s-content .enter li .intro {
   margin-top: 5px;
 }
+.discover-module .discover-content .r-singer .s-content .enter li a:hover {
+  text-decoration: underline;
+}
 .discover-module .discover-content .r-singer .s-content .apply {
   padding: 0 5px 0 0;
-  height: 31px;
-  line-height: 31px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
-  background-color: #fff;
   width: 150px;
   margin: 0 auto;
   border-radius: 5px;
   border: 1px solid #3333335e;
+  background-image: url(img/button2.png);
+  background-position: -1px -60px;
+  overflow: hidden;
 }
 .discover-module .discover-content .r-singer .s-content .apply a {
   display: block;
+  width: 145px;
   color: #333;
   font-weight: 600;
+  background-image: url(img/button2.png);
+  background-position: -100px -100px;
+}
+.discover-module .discover-content .r-singer .s-content .apply a:hover {
+  background-position: -1px -142.5px;
 }
 .discover-module .discover-content .r-dj {
   height: 294px;
@@ -655,6 +848,9 @@ body {
 .discover-module .discover-content .r-dj .d-content .djs {
   margin: 20px 0 0 20px;
 }
+.discover-module .discover-content .r-dj .d-content .djs a:hover {
+  text-decoration: underline;
+}
 
 .low {
   position: relative;
@@ -667,6 +863,7 @@ body {
   width: 980px;
   height: 100%;
   margin: 0 auto;
+  padding-top: 30px;
 }
 .low .low-content .message {
   width: 520px;
@@ -857,18 +1054,40 @@ body {
   background-image: url(img/statbar.png);
   background-position: 0 0;
 }
-.player .p-content .play-line .line-cir {
+.player .p-content .play-line .play-lineCur {
+  position: relative;
+  bottom: 8px;
+  height: 9px;
+  min-width: 1px;
+  max-width: 493px;
+  display: inline-block;
+  float: left;
+  background-image: url(img/statbar.png);
+  background-position: 0 50px;
+}
+.player .p-content .play-line .play-lineCur .line-cir, .player .p-content .play-line .play-lineCur .loadingCir {
   position: absolute;
   top: -7px;
-  left: 0;
+  right: -10px;
   width: 22px;
   height: 24px;
   margin-left: -11px;
+}
+.player .p-content .play-line .play-lineCur .line-cir {
   background-image: url(img/iconall.png);
   background-position: 0 -250px;
 }
-.player .p-content .play-line .line-cir:hover {
+.player .p-content .play-line .play-lineCur .line-cir:hover {
   background-position: 0 -280px;
+}
+.player .p-content .play-line .play-lineCur .loadingCir {
+  display: none;
+  background-image: url(img/loading.gif);
+  background-size: contain;
+  width: 14px;
+  height: 14px;
+  top: -3px;
+  right: -6px;
 }
 .player .p-content .song {
   position: absolute;
@@ -890,6 +1109,24 @@ body {
 }
 .player .p-content .song .src:hover {
   background-position: -130px -103px;
+}
+.player .p-content .playingTime {
+  line-height: 20px;
+}
+.player .p-content .playingTime .currentTime {
+  position: absolute;
+  display: block;
+  top: 21px;
+  right: 255px;
+  color: #a5a5a5;
+}
+.player .p-content .playingTime .totalTime {
+  position: absolute;
+  display: block;
+  top: 21px;
+  right: 220px;
+  font-style: normal;
+  color: #7a7a7a;
 }
 .player .p-content .right-side {
   float: right;
@@ -930,9 +1167,40 @@ body {
 .player .p-content .right-side .list {
   background-position: -42px -68px;
   width: 59px;
+  color: #999;
+  text-align: end;
+  padding-right: 15px;
+  float: right;
+  line-height: 27px;
 }
 .player .p-content .right-side .list:hover {
   background-position: -42px -98px;
+}
+.player .p-content .songList {
+  display: none;
+  width: 100px;
+  position: absolute;
+  top: -113px;
+  right: -30px;
+  background-color: #454545;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.player .p-content .songList ul {
+  width: 100px;
+}
+.player .p-content .songList ul li {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+.player .p-content .songList ul li a {
+  color: #999;
+}
+.player .p-content .songList ul li a:hover {
+  background-color: #272727;
+  color: #fff;
 }
 
 .back {
