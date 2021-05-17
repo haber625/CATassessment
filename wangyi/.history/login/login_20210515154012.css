@@ -1,0 +1,475 @@
+.Login {
+  display: none;
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  margin-left: -361px;
+  z-index: 9998;
+  width: 530px;
+  height: 372px;
+  border-radius: 4px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.8);
+  border: none;
+}
+.Login .title {
+  padding-right: 45px;
+  margin: 0;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 18px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  background-position: 50% 0;
+  border-bottom: 1px solid #191919;
+  border-radius: 4px 4px 0 0;
+  background: #2d2d2d;
+}
+.Login .close {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background-image: url(../img/layer.png);
+  background-position: 13px -83px;
+}
+.Login .loading {
+  display: none;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/loading.gif);
+  background-size: contain;
+}
+.Login .login-qrcode {
+  display: block;
+  max-height: 334px;
+  background-color: #fff;
+}
+.Login .login-qrcode .phonePic {
+  float: left;
+  margin: 38px 0 0 101px;
+  width: 125px;
+  height: 220px;
+  background-image: url(../img/qr_guide.png);
+  background-size: contain;
+}
+.Login .login-qrcode .right {
+  float: left;
+  width: 220px;
+  height: 204px;
+  margin: 38px 0 0 25px;
+  text-align: center;
+}
+.Login .login-qrcode .right .r-title {
+  font-size: 18px;
+}
+.Login .login-qrcode .right .qr {
+  width: 130px;
+  height: 130px;
+  padding: 4px;
+  margin: 13px auto;
+  position: relative;
+  background-image: url(../img/loading.gif);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.Login .login-qrcode .right p a {
+  color: #0c73c2;
+}
+.Login .login-qrcode .right p a:hover {
+  text-decoration: underline;
+}
+.Login .login-qrcode .otherbtn {
+  height: 28px;
+  width: 100%;
+  float: left;
+}
+.Login .login-qrcode .otherbtn .o-btn {
+  display: block;
+  width: 118px;
+  height: 100%;
+  margin: 20px auto 0;
+  padding-right: 0;
+  font-size: 12px;
+  border: 1px solid #979797;
+  border-radius: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+.Login .login-list {
+  display: none;
+  height: 334px;
+  background-color: #fff;
+}
+.Login .login-list .u-main {
+  float: left;
+  width: 224px;
+  height: 202px;
+  margin-top: 40px;
+  padding: 0 35px 3px 40px;
+  border-right: 1px dotted #ccc;
+  box-sizing: content-box;
+}
+.Login .login-list .u-main .u-plt {
+  height: 120px;
+  background-image: url(../img/platform.png);
+  background-repeat: no-repeat;
+  background-position: 13px 0;
+}
+.Login .login-list .u-main .f-mgt10 {
+  margin-top: 10px;
+  width: 219px;
+  height: 31px;
+  padding: 0 5px 0 0;
+}
+.Login .login-list .u-main .f-mgt10 a {
+  background-image: url(../img/button2.png);
+}
+.Login .login-list .u-main .f-mgt10 a i {
+  font-style: normal;
+  width: 174px;
+  background-image: url(../img/button2.png);
+  padding: 0 15px 0 20px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  display: inline-block;
+  box-sizing: content-box;
+}
+.Login .login-list .u-main .u-btn-1 {
+  background-position: right -428px;
+}
+.Login .login-list .u-main .u-btn-1 i {
+  background-position: 0 -387px;
+  color: #fff;
+}
+.Login .login-list .u-main .u-btn-2 {
+  background-position: right -100px;
+}
+.Login .login-list .u-main .u-btn-2 i {
+  background-position: 0 -59px;
+  color: #333;
+}
+.Login .login-list .u-alt {
+  float: left;
+  margin-top: 40px;
+  padding: 3px 0 3px 39px;
+}
+.Login .login-list .u-alt ul li {
+  margin-top: 15px;
+  display: block;
+  width: 148px;
+  line-height: 38px;
+}
+.Login .login-list .u-alt ul li:nth-child(1) {
+  margin-top: 0;
+}
+.Login .login-list .u-alt ul li a {
+  color: #333;
+}
+.Login .login-list .u-alt ul li a:hover {
+  text-decoration: underline;
+}
+.Login .login-list .u-alt ul li i {
+  float: left;
+  width: 38px;
+  height: 38px;
+  margin-right: 15px;
+  background-image: url(../img/logo.png);
+}
+.Login .login-list .u-alt ul li .u-mlg2-wx {
+  background-position: -150px -670px;
+}
+.Login .login-list .u-alt ul li .u-mlg2-qq {
+  background-position: -190px -670px;
+}
+.Login .login-list .u-alt ul li .u-mlg2-wb {
+  background-position: -231px -670px;
+}
+.Login .login-list .u-alt ul li .u-mlg2-wy {
+  background-position: -271px -670px;
+}
+.Login .login-list .u-official-terms {
+  float: left;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 15px;
+}
+.Login .login-list .u-official-terms label {
+  color: #00000066;
+}
+.Login .login-list .u-official-terms a {
+  color: #507DAF;
+}
+.Login .login-list .u-official-terms a:hover {
+  text-decoration: underline;
+}
+.Login .phone_login {
+  height: 273px;
+  background-color: #fff;
+}
+.Login .phone_login .phoneInput {
+  padding: 30px 0 43px;
+  width: 220px;
+  margin: 0 auto;
+}
+.Login .phone_login .phoneInput .p-num {
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  display: inline-block;
+}
+.Login .phone_login .phoneInput .p-num a {
+  position: relative;
+  float: left;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 18px 0 5px;
+  border-right: 1px solid #cdcdcd;
+}
+.Login .phone_login .phoneInput .p-num a .p-code {
+  line-height: 30px;
+  color: #333;
+}
+.Login .phone_login .phoneInput .p-num a .p-icon {
+  position: absolute;
+  top: 14px;
+  right: 7px;
+  width: 7px;
+  height: 4px;
+  background-position: -260px -450px;
+  background-image: url(../img/icon2.png);
+}
+.Login .phone_login .phoneInput .p-num .phoneNum {
+  display: block;
+  width: 171px;
+  padding: 5px 8px 5px;
+  height: 30px;
+  line-height: 20px;
+  border: none;
+}
+.Login .phone_login .phoneInput .p-code {
+  margin-top: 10px;
+}
+.Login .phone_login .phoneInput .p-code .p-password {
+  height: 19px;
+  width: 206px;
+  margin: 0;
+  padding: 5px 6px 6px;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  line-height: 19px;
+  box-sizing: content-box;
+}
+.Login .phone_login .phoneInput .f-mgt10 {
+  margin-top: 10px;
+  line-height: 10px;
+  width: 100%;
+  display: inline-block;
+}
+.Login .phone_login .phoneInput .f-mgt10 input {
+  float: left;
+  margin-right: 10px;
+}
+.Login .phone_login .phoneInput .f-mgt10 label {
+  float: left;
+  color: #979797;
+}
+.Login .phone_login .phoneInput .f-mgt10 a {
+  float: right;
+  color: #979797;
+}
+.Login .phone_login .phoneInput .f-mgt10 a:hover {
+  text-decoration: underline;
+}
+.Login .phone_login .phoneInput .p-l-btn {
+  margin-top: 20px;
+}
+.Login .phone_login .phoneInput .p-l-btn a {
+  width: 215px;
+  height: 31px;
+  line-height: 31px;
+  background-image: url(../img/button2.png);
+  background-position: right -428px;
+  text-align: center;
+}
+.Login .phone_login .phoneInput .p-l-btn a i {
+  display: block;
+  width: 175px;
+  box-sizing: content-box;
+  font-style: normal;
+  color: #fff;
+  padding: 0 15px 0 20px;
+  background-image: url(../img/button2.png);
+  background-position: 0 -387px;
+}
+.Login .phone_login .phoneInput .p-l-btn a i:hover {
+  background-position: 0 -469px;
+}
+.Login .phone_login .phoneInput .p-l-btn a:hover {
+  background-position: right -510px;
+}
+.Login .phone_login .btmbar {
+  padding: 0 19px;
+  height: 48px;
+  border-top: 1px solid #c6c6c6;
+  border-radius: 0 0 4px 4px;
+  line-height: 48px;
+  background-color: #f7f7f7;
+}
+.Login .phone_login .btmbar a {
+  display: inline-block;
+  color: #999;
+  font-size: 12px;
+  height: 100%;
+}
+.Login .phone_login .btmbar .p-others {
+  color: #0c72c3;
+}
+.Login .phone_login .btmbar .p-register {
+  float: right;
+}
+.Login .email_login {
+  height: 273px;
+  background-color: #fff;
+}
+.Login .email_login .emailInput {
+  padding: 30px 0 43px;
+  width: 220px;
+  margin: 0 auto;
+}
+.Login .email_login .emailInput .e-num {
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  display: inline-block;
+}
+.Login .email_login .emailInput .e-num .emailNum {
+  display: block;
+  width: 217px;
+  padding: 5px 8px 5px;
+  height: 30px;
+  line-height: 20px;
+  border: none;
+}
+.Login .email_login .emailInput .e-code {
+  margin-top: 10px;
+}
+.Login .email_login .emailInput .e-code .e-password {
+  height: 19px;
+  width: 206px;
+  margin: 0;
+  padding: 5px 6px 6px;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  line-height: 19px;
+  box-sizing: content-box;
+}
+.Login .email_login .emailInput .f-mgt10 {
+  margin-top: 10px;
+  line-height: 10px;
+  width: 100%;
+  display: inline-block;
+}
+.Login .email_login .emailInput .f-mgt10 input {
+  float: left;
+  margin-right: 10px;
+}
+.Login .email_login .emailInput .f-mgt10 label {
+  float: left;
+  color: #979797;
+}
+.Login .email_login .emailInput .f-mgt10 a {
+  float: right;
+  color: #979797;
+}
+.Login .email_login .emailInput .f-mgt10 a:hover {
+  text-decoration: underline;
+}
+.Login .email_login .emailInput .e-l-btn {
+  margin-top: 20px;
+}
+.Login .email_login .emailInput .e-l-btn a {
+  width: 215px;
+  height: 31px;
+  line-height: 31px;
+  background-image: url(../img/button2.png);
+  background-position: right -428px;
+  text-align: center;
+}
+.Login .email_login .emailInput .e-l-btn a i {
+  display: block;
+  width: 175px;
+  box-sizing: content-box;
+  font-style: normal;
+  color: #fff;
+  padding: 0 15px 0 20px;
+  background-image: url(../img/button2.png);
+  background-position: 0 -387px;
+}
+.Login .email_login .emailInput .e-l-btn a i:hover {
+  background-position: 0 -469px;
+}
+.Login .email_login .emailInput .e-l-btn a:hover {
+  background-position: right -510px;
+}
+.Login .email_login .btmbar {
+  padding: 0 19px;
+  height: 48px;
+  border-top: 1px solid #c6c6c6;
+  border-radius: 0 0 4px 4px;
+  line-height: 48px;
+  background-color: #f7f7f7;
+}
+.Login .email_login .btmbar a {
+  display: inline-block;
+  font-size: 12px;
+  height: 100%;
+}
+.Login .email_login .btmbar .e-others {
+  color: #0c72c3;
+}
+.Login .backToQr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+}
+.Login .backToQr a {
+  background-image: url(../img/qr_login_icon.png);
+  background-size: contain;
+}
+.Login .remind {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-bottom: -15px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(43, 43, 43, 0.8);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.Login .login-qrcode, .Login .login-list, .Login .phone_login {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.backBlock {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=login_20210515154012.css.map */

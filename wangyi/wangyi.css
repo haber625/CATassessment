@@ -127,6 +127,7 @@ body {
   display: block;
 }
 .top .nav_1 .nav_Content .login a {
+  background-size: cover;
   color: #666;
   border-radius: 20px;
 }
