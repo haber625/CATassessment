@@ -24,54 +24,38 @@ var oLRC = {
     offset: 0, //时间补偿值，单位毫秒，用于调整歌词整体位置
     ms: [] //歌词数组{t:时间,c:歌词}
 };
-
-function createLrcObj(lrc) {
-    if (lrc.length == 0) return;
-    var lrcs = lrc.split('\n');//用回车拆分成数组
-    for (var i in lrcs) {//遍历歌词数组
-        lrcs[i] = lrcs[i].replace(/(^\s*)|(\s*$)/g, ""); //去除前后空格
-        var t = lrcs[i].substring(lrcs[i].indexOf("[") + 1, lrcs[i].indexOf("]"));//取[]间的内容
-        var s = t.split(":");//分离:前后文字
-        if (isNaN(parseInt(s[0]))) { //不是数值
-            for (var i in oLRC) {
-                if (i != "ms" && i == s[0].toLowerCase()) {
-                    oLRC[i] = s[1];
-                }
-            }
-        } else { //是数值
-            var arr = lrcs[i].match(/\[(\d+:.+?)\]/g);//提取时间字段，可能有多个
-            var start = 0;
-            for (var k in arr) {
-                start += arr[k].length; //计算歌词位置
-            }
-            var content = lrcs[i].substring(start);//获取歌词内容
-            for (var k in arr) {
-                var t = arr[k].substring(1, arr[k].length - 1);//取[]间的内容
-                var s = t.split(":");//分离:前后文字
-                oLRC.ms.push({//对象{t:时间,c:歌词}加入ms数组
-                    t: (parseFloat(s[0]) * 60 + parseFloat(s[1])).toFixed(3),
-                    c: content
-                });
+function parseLyric(text) {
+    //先按行分割
+    var lyric = text.split('\n');
+    //新建一个数组存放最后结果
+    lrc = new Array();
+    var _l = lyric.length;
+    for (i = 0; i < _l; i++) {
+        //正则匹配播放时间返回一个数组
+        var sj = lyric[i].match(/\[\d{2}:\d{2}((\.|\:)\d{2})\]/g);
+        //获得该行歌词正文 
+        var _lrc = lyric[i].replace(/\[\d{2}:\d{2}((\.|\:)\d{2})\]/g, "");
+        //过滤掉空行等非歌词正文部分
+        if (sj != null) {
+            //可能有多个时间标签对应一句歌词的情况，用一个循环解决
+            var _ll = sj.length;
+            for (j = 0; j < _ll; j++) {
+                var _s = sj[j];
+                var min = Number(String(_s.match(/\[\d{2}/i)).slice(1));
+                var sec = parseFloat(String(_s.match(/\d{2}\.\d{2}/i)));
+                //换算时间，保留两位小数
+                var _t = Math.round((min * 60 + sec) * 100) / 100;
+                //把时间和对应的歌词保存到数组
+                lrc.push([_t, _lrc]);
             }
         }
     }
-    oLRC.ms.sort(function (a, b) {//按时间顺序排序
-        return a.t - b.t;
+    //重新按时间排序
+    lrc.sort(function (a, b) {
+        return a[0] - b[0];
     });
-
-    for (var i in oLRC) { //查看解析结果
-        console.log(i, ":", oLRC[i]);
-    }
+    return lrc;
 }
-//显示歌词
-function showLRC() {
-    var s = "";
-    for (var i in oLRC.ms) {//遍历ms数组，把歌词加入列表
-        s += '<li>' + oLRC.ms[i].c + '</li>';
-    }
-    lyrics.innerHTML = s;
-}
-
 
 //获取按钮上一首/下一首/暂停/进度条
 let audioPlayer = document.getElementById('audioPlayer');
@@ -141,9 +125,7 @@ get('http://localhost:3000/playlist/detail?id=19723756', '', function (data) {
     //获取歌词
     get('http://localhost:3000/lyric', 'id=' + song_toplist[0].song_id, function (data) {
         lyrics.innerHTML = data.lrc.lyric;
-        var text = createLrcObj(JSON.stringify(data.lrc.lyric))
-        showLRC();
-        console.log(data.lrc.lyric);
+        console.log(data.lrc);
     })
 })
 
@@ -199,6 +181,18 @@ for (var i = 0; i < 30; i++) {
         })
         //获取歌词
         get('http://localhost:3000/lyric', 'id=' + this.song_id, function (data) {
+            var str = data;
+            str = str.replace(/\]\[/g, '] [');//"]["没有空格会影响匹配结果
+            var arr = str.match(/(\[\d{2}:\d{2}\.\d{2}\])(.[^\[\]]*)?/g);
+            var time = [], txt = [];
+            for (var i = 0; i < arr.length; i++) {
+                /^(\[\d{2}:\d{2}\.\d{2}\])(.[^\[\]]*)?$/.exec(arr[i]);
+                time.push(RegExp.$1);
+                txt.push(RegExp.$2);
+            }
+            alert(arr);
+            alert(time);
+            alert(txt);
             lyrics.innerHTML = data.lrc.lyric;
         })
     })

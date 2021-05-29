@@ -69,7 +69,7 @@ function showLRC() {
     for (var i in oLRC.ms) {//遍历ms数组，把歌词加入列表
         s += '<li>' + oLRC.ms[i].c + '</li>';
     }
-    lyrics.innerHTML = s;
+    document.getElementById("lyric").innerHTML = s;
 }
 
 
@@ -142,7 +142,7 @@ get('http://localhost:3000/playlist/detail?id=19723756', '', function (data) {
     get('http://localhost:3000/lyric', 'id=' + song_toplist[0].song_id, function (data) {
         lyrics.innerHTML = data.lrc.lyric;
         var text = createLrcObj(JSON.stringify(data.lrc.lyric))
-        showLRC();
+        console.log(text);
         console.log(data.lrc.lyric);
     })
 })

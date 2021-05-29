@@ -63,13 +63,12 @@ function createLrcObj(lrc) {
         console.log(i, ":", oLRC[i]);
     }
 }
-//显示歌词
 function showLRC() {
     var s = "";
     for (var i in oLRC.ms) {//遍历ms数组，把歌词加入列表
         s += '<li>' + oLRC.ms[i].c + '</li>';
     }
-    lyrics.innerHTML = s;
+    document.getElementById("lyric").innerHTML = s;
 }
 
 
@@ -142,7 +141,7 @@ get('http://localhost:3000/playlist/detail?id=19723756', '', function (data) {
     get('http://localhost:3000/lyric', 'id=' + song_toplist[0].song_id, function (data) {
         lyrics.innerHTML = data.lrc.lyric;
         var text = createLrcObj(JSON.stringify(data.lrc.lyric))
-        showLRC();
+        console.log(text);
         console.log(data.lrc.lyric);
     })
 })
@@ -199,6 +198,18 @@ for (var i = 0; i < 30; i++) {
         })
         //获取歌词
         get('http://localhost:3000/lyric', 'id=' + this.song_id, function (data) {
+            var str = data;
+            str = str.replace(/\]\[/g, '] [');//"]["没有空格会影响匹配结果
+            var arr = str.match(/(\[\d{2}:\d{2}\.\d{2}\])(.[^\[\]]*)?/g);
+            var time = [], txt = [];
+            for (var i = 0; i < arr.length; i++) {
+                /^(\[\d{2}:\d{2}\.\d{2}\])(.[^\[\]]*)?$/.exec(arr[i]);
+                time.push(RegExp.$1);
+                txt.push(RegExp.$2);
+            }
+            alert(arr);
+            alert(time);
+            alert(txt);
             lyrics.innerHTML = data.lrc.lyric;
         })
     })

@@ -142,7 +142,7 @@ get('http://localhost:3000/playlist/detail?id=19723756', '', function (data) {
     get('http://localhost:3000/lyric', 'id=' + song_toplist[0].song_id, function (data) {
         lyrics.innerHTML = data.lrc.lyric;
         var text = createLrcObj(JSON.stringify(data.lrc.lyric))
-        showLRC();
+        console.log(text);
         console.log(data.lrc.lyric);
     })
 })
