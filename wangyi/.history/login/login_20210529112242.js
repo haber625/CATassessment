@@ -434,9 +434,8 @@ logout.onclick = function () {
         un_userInform.style.display = "block";
         u_content.style.display = "none";
         userInform.style.height = "126px";
+        headPic.innerHTML = "登录";
         headPic.style.backgroundImage = "";
-        login_btn.style.display = "block";
-        login.style.display = "none";
     })
 }
 

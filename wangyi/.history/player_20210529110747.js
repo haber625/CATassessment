@@ -116,6 +116,9 @@ get('http://localhost:3000/playlist/detail?id=19723756', '', function (data) {
     })
     //获取歌词
     get('http://localhost:3000/lyric', 'id=' + song_toplist[0].song_id, function (data) {
+        data = JSON.parse(data)
+        var text = parseLyric(data)
+        console.log(text);
         lyrics.innerHTML = data.lrc.lyric;
         console.log(data.lrc);
     })

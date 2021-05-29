@@ -116,6 +116,19 @@ get('http://localhost:3000/playlist/detail?id=19723756', '', function (data) {
     })
     //获取歌词
     get('http://localhost:3000/lyric', 'id=' + song_toplist[0].song_id, function (data) {
+        var str = data;
+        str = str.replace(/\]\[/g, '] [');//"]["没有空格会影响匹配结果
+        var arr = str.match(/(\[\d{2}:\d{2}\.\d{2}\])(.[^\[\]]*)?/g);
+        var time = [], txt = [];
+        for (var i = 0; i < arr.length; i++) {
+            /^(\[\d{2}:\d{2}\.\d{2}\])(.[^\[\]]*)?$/.exec(arr[i]);
+            time.push(RegExp.$1);
+            txt.push(RegExp.$2);
+        }
+        alert(arr);
+        alert(time);
+        alert(txt);
+
         lyrics.innerHTML = data.lrc.lyric;
         console.log(data.lrc);
     })
