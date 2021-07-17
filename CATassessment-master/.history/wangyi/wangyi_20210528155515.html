@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="wangyi.css">
+    <link rel="stylesheet" href="row/row.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="login/login.css">
+</head>
+
+<body>
+    <!-- 背后蒙版 -->
+    <div class=" backBlock"></div>
+
+    <!-- 顶部导航栏 -->
+    <div class="top">
+        <div class="nav_1">
+            <div class="nav_Content">
+                <h1 class="full left">
+                    <a href="javascript:;" class="full"></a>
+                </h1>
+                <ul class="flag full left ">
+                    <li class="left">
+                        <span class="nav_1_span" onclick="spanOnclick">
+                            <a href="#" style="background-color: #000;">发现音乐</a></span>
+                    </li>
+                    <li class="left">
+                        <span>
+                            <a href="#">我的音乐 </a></span>
+                    </li>
+                    <li class="left">
+                        <span>
+                            <a href="#">朋友</a></span>
+                    </li>
+                    <li class="left">
+                        <span>
+                            <a href="#">商城</a></span>
+                    </li>
+                    <li class="left">
+                        <span>
+                            <a href="#">音乐人</a></span>
+                    </li>
+                    <li class="left">
+                        <span>
+                            <a href="#">下载客户端</a></span>
+                    </li>
+                </ul>
+                <!-- 登录按钮 -->
+                <div class="login">
+                    <a href="javascript:;" class="full headPic">登录</a>
+                    <div class="login_nav">
+                        <div class="arrow"></div>
+                        <div class="ln_content full">
+                            <ul class="full">
+                                <li><a href="javascript:;" class="full">我的主页</a></li>
+                                <li><a href="javascript:;" class="full">我的消息</a></li>
+                                <li><a href="javascript:;" class="full">我的等级</a></li>
+                                <li><a href="javascript:;" class="full">VIP会员</a></li>
+                                <li><a href="javascript:;" class="full">个人设置</a></li>
+                                <li><a href="javascript:;" class="full logout">退出登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 登录-下拉栏 -->
+                <div class="creator right">
+                    <a href="javascript:;" class="full">创作者中心</a>
+                </div>
+                <div class="search">
+                    <span class="searchMark"></span>
+                    <input type="text" id="inputSearch" value="音乐/视频/电台/用户">
+                </div>
+
+            </div>
+        </div>
+        <div class=" nav_2">
+            <div class="nav_Content">
+                <span class="triangle"></span>
+                <ul>
+                    <li><a href="#">推荐</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">歌单</a></li>
+                    <li><a href="#">主播电台</a></li>
+                    <li><a href="#">歌手</a></li>
+                    <li><a href="#">新碟上架</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="row">
+        <div class="r_content">
+            <div class="r-cont">
+                <span class="b_left"><a href="javascript:;">&lt;</a></span>
+                <span class="b_right"><a href="javascript:;">></a></span>
+                <ul class="pic" style="left: 0px;">
+                    <li>
+                        <img src="row/img/1 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/2 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/3 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/4 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/5 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/6 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/7 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/8 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/9 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/10 (1).jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="row/img/1 (1).jpg" alt="">
+                    </li>
+
+                </ul>
+                <ol class="circle">
+                    <!-- 此处动态添加li -->
+                </ol>
+            </div>
+            <div class="download">
+                <a href="javascript:;"></a>
+                <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 广告视频 -->
+    <div class="adver">
+        <div class="radio">
+            <video src="img/WeChat_20210515232738.mp4" autoplay="true" controls="controls" loop="loop" muted="muted"
+                height="544px" width="960px"></video>
+            <div class=" cover ">
+                <div class="icon"></div>
+                <div class="title">音乐的力量</div>
+                <div class="bottm">
+                    <a href="javascript:;" class="try"> 开始使用</a>
+                    <a href="javascript:;" class="learnMore"> 了解更多&nbsp;></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- discover-module -->
+    <div class="discover-module">
+        <div class="discover-content full">
+            <!-- 左侧内容 -->
+            <div class="dis-left left">
+                <!-- 查看2018年报告 -->
+                <div class="report2018 left">
+                    <div class="reportContent full">
+                        <a class="black full">点击查看2018年的听歌报告</a>
+                    </div>
+                </div>
+                <!-- 热门推荐 -->
+                <div class="hot full left">
+                    <div class="titlt">
+                        <span class="t-icon left"></span>
+                        <a href="#" class="tle left">热门推荐</a>
+                        <div class="tab ">
+                            <a href="#">华语</a>
+                            <span class="line">|</span>
+                            <a href="#">流行</a>
+                            <span class="line">|</span>
+                            <a href="#">摇滚</a>
+                            <span class="line">|</span>
+                            <a href="#">民谣</a>
+                            <span class="line">|</span>
+                            <a href="#">电子</a>
+                        </div>
+                        <i class="cor right"></i>
+                        <a href="#" class="more right">更多</a>
+                    </div>
+                    <ul class="h-songs">
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/109951165926446294.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">96682</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">把喜欢藏进波子汽水泡泡里♡咕咚喝掉！</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/109951165921666792.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">96682</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">把喜欢藏进波子汽水泡泡里♡咕咚喝掉！</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/109951165893205726.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">96682</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">把喜欢藏进波子汽水泡泡里♡咕咚喝掉！</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/109951165548275892.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">96682</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">把喜欢藏进波子汽水泡泡里♡咕咚喝掉！</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/109951164614300882.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">69467万</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">[华语私人订制] 最懂你的华语推荐 每日更新35首</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/18910500486701886.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">96682</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">把喜欢藏进波子汽水泡泡里♡咕咚喝掉！</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/default_album.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">96682</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">把喜欢藏进波子汽水泡泡里♡咕咚喝掉！</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <div class="cover">
+                                <a href="#" class="full"></a>
+                                <img src="img/music/109951165925791179.jpg" alt="" class="full">
+                                <div class="bottom">
+                                    <a class="icon-play" href="#"></a>
+                                    <span class="icon-headset left"></span>
+                                    <span class="num">637637万</span>
+                                </div>
+                            </div>
+                            <p class="dec">
+                                <a href="#">私人雷达 | 根据听歌记录为你打造</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 新碟上架 -->
+                <div class="new full left">
+                    <div class="titlt">
+                        <span class="t-icon left"></span>
+                        <a href="#" class="tle left">新碟上架</a>
+                        <i class="cor right"></i>
+                        <a href="#" class="more right">更多</a>
+                    </div>
+                    <!-- 专辑上新 -->
+                    <div class="n-content">
+                        <div class="inner">
+                            <ul>
+                                <li>
+                                    <div> <img src="img/special_album/109951165870857907.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">Walpurgis</a>
+                                    <p>Aimer</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165909496721.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">NANA |||</a>
+                                    <p>欧阳娜娜</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165928935729.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">EMERGING</a>
+                                    <p>范丞丞</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165929809633.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">Moos</a>
+                                    <p>24kGolden</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165870857907.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">Walpurgis</a>
+                                    <p>Aimer</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165909496721.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">NANA |||</a>
+                                    <p>欧阳娜娜</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165928935729.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">EMERGING</a>
+                                    <p>范丞丞</p>
+                                </li>
+                                <li>
+                                    <div> <img src="img/special_album/109951165929809633.jpg" alt="">
+                                    </div>
+                                    <a href="javascript:;" class="albumName">Moos</a>
+                                    <p>24kGolden</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- 三项榜单 -->
+                <div class="bill full left">
+                    <div class="titlt">
+                        <span class="t-icon left"></span>
+                        <a href="#" class="tle left">榜单</a>
+                        <i class="cor right"></i>
+                        <a href="#" class="more right">更多</a>
+                    </div>
+                    <div class="b-content">
+                        <!-- 飙升榜 -->
+                        <dl class="blk ">
+                            <dt class="top">
+                                <div class="pic">
+                                    <img class="j-img" src="img/18696095720518497.jpg">
+                                    <a href="#" class="msk" title="飙升榜"></a>
+                                </div>
+                                <div class="tit">
+                                    <a href="#" title="飙升榜">
+                                        <h3 class="f-fs1 f-thide">飙升榜</h3>
+                                    </a>
+                                    <div class="btn">
+                                        <a href="#" class="play left"></a>
+                                        <a href="#" class="collect left"></a>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">1</span>
+                                        <a href="#" class="dd-a song">海底（Live）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">2</span>
+                                        <a href="#" class="dd-a song">爱人错过（Live）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">3</span>
+                                        <a href="#" class="dd-a song">萱花草</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">4</span>
+                                        <a href="#" class="dd-a song">为侠（Live）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">5</span>
+                                        <a href="#" class="dd-a song">Dancing With Your Ghost(Live)</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">6</span>
+                                        <a href="#" class="dd-a song">十全九美</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">7</span>
+                                        <a href="#" class="dd-a song">慢热</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">8</span>
+                                        <a href="#" class="dd-a song">雾里</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">9</span>
+                                        <a href="#" class="dd-a song">恋爱画板</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">10</span>
+                                        <a href="#" class="dd-a song">花,太阳,彩虹,你</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+
+                                </ol>
+                                <div class="more"><a href="/discover/toplist?id=19723756" class="s-fc0">查看全部&gt;</a>
+                                </div>
+                            </dd>
+                        </dl>
+                        <!-- 新歌榜 -->
+                        <dl class="blk blk-sed ">
+                            <dt class="top">
+                                <div class="pic">
+                                    <img class="j-img" src="img/18713687906568048.jpg">
+                                    <a href="#" class="msk" title="新歌榜"></a>
+                                </div>
+                                <div class="tit">
+                                    <a href="#" title="新歌榜">
+                                        <h3 class="f-fs1 f-thide">新歌榜</h3>
+                                    </a>
+                                    <div class="btn">
+                                        <a href="#" class="play left"></a>
+                                        <a href="#" class="collect left"></a>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">1</span>
+                                        <a href="#" class="dd-a song-new">环绕</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">2</span>
+                                        <a href="#" class="dd-a song-new">海底（Live）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">3</span>
+                                        <a href="#" class="dd-a song-new">乌鸦</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">4</span>
+                                        <a href="#" class="dd-a song-new">Mood(Lil Ghost Remix)</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">5</span>
+                                        <a href="#" class="dd-a song-new">不加糖（ZERO）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">6</span>
+                                        <a href="#" class="dd-a song-new">一格格</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">7</span>
+                                        <a href="#" class="dd-a song-new">My Cookie Can</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">8</span>
+                                        <a href="#" class="dd-a song-new">如何（Skyline）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">9</span>
+                                        <a href="#" class="dd-a song-new">溯(Reverse)（Live）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">10</span>
+                                        <a href="#" class="dd-a song-new">这世界那么多人</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+
+                                </ol>
+                                <div class="more"><a href="/discover/toplist?id=19723756" class="s-fc0">查看全部&gt;</a>
+                                </div>
+                            </dd>
+                        </dl>
+                        <!-- 原创榜 -->
+                        <dl class="blk blk-trd " style="width: 224px;">
+                            <dt class="top">
+                                <div class="pic">
+                                    <img class="j-img" src="img/18740076185638788.jpg">
+                                    <a href="#" class="msk" title="原创榜"></a>
+                                </div>
+                                <div class="tit">
+                                    <a href="#" title="原创榜">
+                                        <h3 class="f-fs1 f-thide">原创榜</h3>
+                                    </a>
+                                    <div class="btn">
+                                        <a href="#" class="play left"></a>
+                                        <a href="#" class="collect left"></a>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">1</span>
+                                        <a href="#" class="dd-a song-original">这场青春值得骄傲</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">2</span>
+                                        <a href="#" class="dd-a song-original">荣耀我的Hood</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left wangyiRed">3</span>
+                                        <a href="#" class="dd-a song-original">痴人荒春</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">4</span>
+                                        <a href="#" class="dd-a song-original">夜聊</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">5</span>
+                                        <a href="#" class="dd-a song-original">Action!!!</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">6</span>
+                                        <a href="#" class="dd-a song-original">有声查理</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">7</span>
+                                        <a href="#" class="dd-a song-original">夜谈几句</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">8</span>
+                                        <a href="#" class="dd-a song-original">羅曼史已死 romance is dead</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">9</span>
+                                        <a href="#" class="dd-a song-original">Joker</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="dd-span left">10</span>
+                                        <a href="#" class="dd-a song-original">嗯哼（Uh Huh）</a>
+                                        <div class="oper">
+                                            <a href="#" class="o-play" title="播放" hidefocus="true"></a>
+                                            <a href="#" class="o-playList" title="添加到播放列表" hidefocus="true"></a>
+                                            <a href="#" class="o-collect" title="收藏" hidefocus="true"></a>
+                                        </div>
+                                    </li>
+
+                                </ol>
+                                <div class="more"><a href="/discover/toplist?id=19723756" class="s-fc0">查看全部&gt;</a>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 右侧内容 -->
+            <div class="dis-right right">
+                <!-- 心动模式 -->
+                <div class="xdms right">
+                    <div class="xdmsContent full right">
+                        <a class="black full">心动模式</a>
+                    </div>
+                </div>
+
+                <!-- 登录提醒 -->
+                <div class="userInform full left">
+
+                    <!-- 用户信息 （未登录时） -->
+                    <div class="un-userInform full">
+                        <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+                        <!-- <a href="javascript:;" class="userInform-login">用户登录</a> -->
+                    </div>
+
+                    <!-- 用户信息 (需要登录)-->
+                    <div class="u-content full">
+                        <div class="u-name">
+                            <a href="javascript:;" class="head">
+                                <img src="img/headPic.jpg" alt="" class="full HeadPic">
+                            </a>
+                            <div class="info">
+                                <a href="javascript:;" class="name">name</a>
+                                <a href="javascript:;" class="level">&nbsp; level</a>
+                                <a href="javascript:;" class="sign"></a>
+                            </div>
+                        </div>
+                        <div class="u-follows">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 入驻歌手 -->
+                <div class="r-singer full left">
+                    <div class="s-content full">
+                        <h3 class="singer">
+                            <span>入驻歌手</span>
+                            <a href="#" class="right">查看全部>></a>
+                        </h3>
+                        <ul class="enter">
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/18740076185638788.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">张惠妹aMEI</a>
+                                </p>
+                                <p class="intro">台湾歌手张惠妹</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/109951162820707114.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">fine乐团</a>
+                                </p>
+                                <p class="intro">独立音乐人</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/109951162916034289.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">萬嘵利</a>
+                                </p>
+                                <p class="intro">独立音乐人</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/18806046882229308.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">音乐人赵磊</a>
+                                </p>
+                                <p class="intro">民谣歌手</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/3438172872737957.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">王三溥</a>
+                                </p>
+                                <p class="intro">音乐人</p>
+                        </ul>
+                        <div class="apply">
+                            <a href="#" claass="full">申请成为网易音乐人</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 热门主播 -->
+                <div class="r-dj full left">
+                    <div class="d-content full">
+                        <h3>热门主播</h3>
+                        <ul class="djs">
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/1407374893913311.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">陈立</a>
+                                </p>
+                                <p class="intro">心理学家、美食家陈立教授</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/109951164843970584.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">刘维-Julius</a>
+                                </p>
+                                <p class="intro">歌手、播客节目《维维道来》主持人</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/109951164999332400.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">莫非定律MoreFeel</a>
+                                </p>
+                                <p class="intro">男女双人全创作独立乐团</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/109951165825466770.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">碎嘴许美达</a>
+                                </p>
+                                <p class="intro">脱口秀网络红人</p>
+                            </li>
+                            <li>
+                                <a href="#" class="pic">
+                                    <img src="img/singer/109951163676573083.jpg" alt="" class="full">
+                                </a>
+                                <p class="s-name">
+                                    <a href="#">银临Rachel</a>
+                                </p>
+                                <p class="intro">古风音乐人</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="low">
+        <div class="low-content">
+            <div class="message left full">
+                <p class="link">
+                    <a href="#">服务条款</a>
+                    <span class="line ">|</span>
+                    <a href="#">隐私政策</a>
+                    <span class="line">|</span>
+                    <a href="#">儿童隐私政策</a>
+                    <span class="line">|</span>
+                    <a href="#">版权投诉指引</a>
+                    <span class="line">|</span>
+                    <a href="#">意见反馈</a>
+                    <span class="line">|</span>
+                </p>
+                <p class="rights">
+                    <span class="sep span">网易公司版权所有©1997-2021</span>
+                    <span class="span">杭州乐读科技有限公司运营：</span>
+                    <a href="#">浙网文[2021] 1186-054号</a>
+                </p>
+                <p class="contact">
+                    <span class="sep span">违法和不良信息举报电话：0571-89853516</span>
+                    <span class="span">举报邮箱：</span>
+                    <a class="alink" href="mailto:ncm5990@163.com">ncm5990@163.com</a>
+                </p>
+                <p class="num">
+                    <a href="#">粤B2-20090191-18 工业和信息化部备案管理系统网站</a>
+                    <span></span>
+                    <a href="#">浙公网安备 33010902002564号</a>
+                </p>
+            </div>
+            <ul class="enter right full">
+                <li class="unit-1">
+                    <a class="logo logonew logo-amped f-tid" href="https://web-amped.music.163.com/"
+                        target="_blank"></a>
+                    <span class="tt tt-amped" style="width: 90px; margin-left: -10px;"></span>
+                </li>
+                <li class="unit-2 m-left">
+                    <a class="logo logonew logo-amped f-tid" href="https://web-amped.music.163.com/"
+                        target="_blank"></a>
+                    <span class="tt tt-amped"></span>
+                </li>
+                <li class="unit-3 m-left">
+                    <a class="logo logonew logo-amped f-tid" href="https://web-amped.music.163.com/"
+                        target="_blank"></a>
+                    <span class="tt tt-amped"></span>
+                </li>
+                <li class="unit-4 m-left">
+                    <a class="logo logonew logo-amped f-tid" href="https://web-amped.music.163.com/"
+                        target="_blank"></a>
+                    <span class="tt tt-amped"></span>
+                </li>
+                <li class="unit-5 m-left">
+                    <a class="logo logonew logo-amped f-tid" href="https://web-amped.music.163.com/"
+                        target="_blank"></a>
+                    <span class="tt tt-amped"></span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- player底部播放器 -->
+    <div class="player">
+        <audio src=" https://music.163.com/song/media/outer/url?id=3950546" controls="controls" id="audioPlayer"
+            style="display: none;"></audio>
+        <div class="p-hidden">
+            <span class="right">
+                <a href="javascript:;" class="lock" style="background-position: -80px -376px;"></a>
+            </span>
+        </div>
+        <div class="p-block">
+        </div>
+        <div class="p-content">
+            <!-- 播放按钮 -->
+            <div class="btns full">
+                <a href="javascript:;" class="former left "></a>
+                <a href="javascript:;" class="btns-play left " style="background-position-y:-204px;"></a>
+                <a href="javascript:;" class="next left "></a>
+            </div>
+            <!-- 歌曲封面 -->
+            <div class="music-pic">
+                <a href="#" class="full">
+                    <img src="img/default_album.jpg" alt="" class="full musicPic">
+                </a>
+            </div>
+            <!-- 播放条 -->
+            <div class="play-detail">
+                <!-- 播放进度条 -->
+                <div class="play-line">
+                    <div class="play-line-content full"></div>
+                    <div class="play-lineCur">
+                        <a href="javascript:;" class="line-cir"></a>
+                        <a href="javascript:;" class="loadingCir"></a>
+                    </div>
+                </div>
+                <div class="song">
+                    <a href="javascript:;" class="songName">歌名</a>
+                    <a href="javascript:;" class="songSinger">歌手</a>
+                    <a href="javascript:;" href="javascript:;" class="src"></a>
+                </div>
+                <div class="playingTime">
+                    <p class="currentTime">00:00</p>
+                    <p class="totalTime">| 0:00</p>
+                </div>
+            </div>
+            <!-- 右侧功能按钮 -->
+            <div class="right-side">
+                <a href="#" class="collect"></a>
+                <a href="#" class="share"></a>
+                <a href="#" class="sound"></a>
+                <a href="#" class="circulate"></a>
+                <a href="#" class="list"></a>
+            </div>
+            <!-- 当前待播放列表 -->
+            <div class="songList">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 固定定位：回到顶部 -->
+    <a href="#" class="back">^</a>
+
+    <!-- 登录窗口 -->
+    <div class="Login">
+        <!-- 上框框 -->
+        <div class="title">登录</div>
+        <a href="javascript:;" class="close"></a>
+
+        <!-- 加载小圈圈 -->
+        <div class="loading"></div>
+
+        <!-- 二维码登录 -->
+        <div class="login-qrcode full" style="display: block;">
+            <div class="phonePic"></div>
+            <div class="right">
+                <div class="r-title">扫码登陆</div>
+                <div class="qr" style="background-image: url();"></div>
+                <p>使用&nbsp;
+                    <a href="#" class="download-link">网易云音乐app</a>
+                    &nbsp;扫码登录
+                </p>
+            </div>
+            <div class="otherbtn">
+                <a href="#" class="o-btn">选择其他登录模式</a>
+            </div>
+        </div>
+
+        <!-- 其他方式登录的总窗口 -->
+        <div class="login-list" style="display: none;">
+            <!-- 手机号码登录 -->
+            <div class="u-main">
+                <div class="u-plt"></div>
+                <div class="f-mgt10">
+                    <a href="javascript:;" class="u-btn-1 full">
+                        <i>手机号登录</i>
+                    </a>
+                </div>
+                <div class="f-mgt10">
+                    <a href="javascript:;" class="u-btn-2 full">
+                        <i>注册</i>
+                    </a>
+                </div>
+            </div>
+            <!-- 微信/qq/新浪/网易登录 -->
+            <div class="u-alt">
+                <ul>
+                    <li><a href="javascript:;" class="full a-wx">
+                            <i class="u-mlg2-wx"></i>微信登录
+                        </a></li>
+                    <li><a href="https://music.163.com/api/sns/authorize?snsType=5&clientType=web2&callbackType=Login&forcelogin=true"
+                            class="full a-qq">
+                            <i class="u-mlg2-qq"></i>QQ登录
+                        </a></li>
+                    <li><a href="https://music.163.com/api/sns/authorize?snsType=2&clientType=web2&callbackType=Login&forcelogin=true"
+                            class="full a-wb">
+                            <i class="u-mlg2-wb"></i>微博登录
+                        </a></li>
+                    <li><a href="javascript:;" class="full e_transition">
+                            <i class="u-mlg2-wy"></i>网易云账号登录
+                        </a></li>
+                </ul>
+            </div>
+            <!-- 同意协议 -->
+            <div class="u-official-terms">
+                <input type="checkbox" id="u-official-terms">
+                <label for="u-official-terms">同意</label>
+                <a href="javascript:;">《服务条款》</a>
+                <a href="javascript:;">《隐私政策》</a>
+                <a href="javascript:;">《儿童隐私政策》</a>
+            </div>
+            <!-- 返回二维码登录 -->
+            <div class="backToQr">
+                <a href="javascript:;" class="full"></a>
+            </div>
+        </div>
+
+        <!-- 手机号码登录的子窗口 -->
+        <div class="phone_login" style="display: none;">
+            <div class="phoneInput">
+                <div class="p-num">
+                    <a href="javascript:;">
+                        <span class="p-code">+86</span>
+                        <span class="p-icon"></span>
+                    </a>
+                    <input type="number" onkeyup="this.value=this.value.replace(/\D/g,'')" class="phoneNum"
+                        placeholder="请输入手机号">
+                </div>
+                <div class="p-code">
+                    <input type="password" class="p-password" placeholder="请输入密码">
+                </div>
+                <div class="f-mgt10">
+                    <input type="checkbox" checked id="p-auto">
+                    <label for="p-auto">自动保存</label>
+                    <a href="javascript" class="p-forget">忘记密码?</a>
+                </div>
+                <div class="p-l-btn">
+                    <a href="javascript:;" class="p-login full">
+                        <i>登 录</i>
+                    </a>
+                </div>
+            </div>
+            <div class="btmbar">
+                <a href="javascript:;" class="p-others">&lt; &nbsp; &nbsp;其他登录方式</a>
+                <a href="javascript:;" class="p-register">没有账号？免费注册&nbsp;&nbsp;></a>
+            </div>
+        </div>
+        <!-- 邮箱登录的子窗口 -->
+        <div class="email_login" style="display: none;">
+            <div class="emailInput">
+                <div class="e-num">
+                    <input type="text" class="emailNum" placeholder="请输入邮箱号">
+                </div>
+                <div class="e-code">
+                    <input type="password" class="e-password" placeholder="请输入密码">
+                </div>
+                <div class="f-mgt10">
+                    <input type="checkbox" checked id="e-auto">
+                    <label for="e-auto">自动登录</label>
+                    <a href="javascript" class="e-forget">忘记密码?</a>
+                </div>
+                <div class="e-l-btn">
+                    <a href="javascript:;" class="e-login full">
+                        <i>登 录</i>
+                    </a>
+                </div>
+            </div>
+            <div class="btmbar">
+                <a href="javascript:;" class="e-others">&lt; &nbsp; &nbsp;其他登录方式</a>
+            </div>
+        </div>
+
+        <!-- 勾选提醒 -->
+        <div class="remind">请先勾选同意《服务条款》、《隐私政策》、《儿童隐私政策》</div>
+
+        <!-- 登陆失败框框 -->
+        <div class="l-fail remind">登录失败</div>
+
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="row/row.js"></script>
+    <script src="wangyi.js"></script>
+    <script src="login/login.js"></script>
+    <script src="player.js"></script>
+</body>
+
+
+</html>

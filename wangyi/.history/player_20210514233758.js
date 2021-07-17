@@ -1,1 +1,0 @@
-let audioPlayer = document.getElementById('audioPlayer');
